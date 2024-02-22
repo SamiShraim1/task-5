@@ -2,7 +2,11 @@ const inputBox = document.querySelector('input');
 const list = document.querySelector('.list');
 document.querySelector('button').onclick = function addTask(){
     if(inputBox.value == ''){
-        alert('you must write a task')
+        Swal.fire({
+            title: "Oops",
+            text: "You must write a task!",
+            icon: "warning"
+          });
     }
     else{
         const li =document.createElement("li");
